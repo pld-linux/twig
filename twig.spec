@@ -9,11 +9,11 @@ Source0:	http://twig.screwdriver.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	03bbdd4d6180789451a2bb20c06f790f
 Patch0:		%{name}-php4.patch
 URL:		http://twig.screwdriver.net/
-Requires:	webserver
 Requires:	php
 Requires:	php-gettext
 Requires:	php-pcre
 Requires:	php-imap
+Requires:	webserver
 Provides:	webmail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Prefix:		/home/services/httpd/html
@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG CREDITS README TODO docs/* COPYING FAQ UPGRADE
+%doc CHANGELOG CREDITS FAQ README TODO UPGRADE docs/*
 %dir %{_twigdir}
 %dir %{_twigdir}/config
 %config(noreplace) %verify(not size mtime md5) %{_twigdir}/config/*
