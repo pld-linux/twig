@@ -52,8 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG CREDITS README TODO docs/* COPYING FAQ UPGRADE
 %dir %{_twigdir}
-
-%config %{_twigdir}/config/*
+%dir %{_twigdir}/config
+%config(noreplace) %verify(not size mtime md5) %{_twigdir}/config/*
 %{_twigdir}/features
 %{_twigdir}/goto.php
 %{_twigdir}/images
