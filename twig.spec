@@ -28,6 +28,9 @@ you check mail by any cookie-aware WWW browser.
 %patch0 -p1
 
 %build
+for I in `find . -name '*.php3'`; do
+	mv "$I" "`echo $I | sed -e 's/php3/php/g'`"
+done
 
 %install
 rm -rf $RPM_BUILD_ROOT
