@@ -1,4 +1,5 @@
-Summary:	TWIG Webmail and PIM package
+Summary:	TWIG - webmail and PIM package
+Summary(pl):	TWIG - pakiet do poczty WWW i zarz±dzania informacjami osobistymi
 Name:		twig
 Version:	2.7.7
 Release:	1
@@ -21,10 +22,15 @@ Prefix:		/home/services/httpd/html
 
 %description
 This package contains TWIG, a webmail and PIM system which allows
-you check mail by any cookie-aware WWW browser. 
+you check mail by any cookie-aware WWW browser.
+
+%description
+Ten pakiet zawiera system poczty WWW i zarz±dzania informacjami
+osobistymi TWIG, umo¿liwiaj±cy sprawdzanie poczty za pomoc± dowolnej
+wspieraj±cej ciasteczka (cookies) przegl±darki WWW.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 
 %build
@@ -44,13 +50,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG CREDITS README  TODO docs/* COPYING  FAQ UPGRADE
+%doc CHANGELOG CREDITS README TODO docs/* COPYING FAQ UPGRADE
 %dir %{_twigdir}
 
 %config %{_twigdir}/config/*
 %{_twigdir}/features
-%{_twigdir}/goto.php  
-%{_twigdir}/images  
-%{_twigdir}/index.php  
-%{_twigdir}/lib  
+%{_twigdir}/goto.php
+%{_twigdir}/images
+%{_twigdir}/index.php
+%{_twigdir}/lib
 %{_twigdir}/test.php
