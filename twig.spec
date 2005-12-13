@@ -11,18 +11,17 @@ Patch0:		%{name}-php4.patch
 URL:		http://twig.screwdriver.net/
 Requires:	php
 Requires:	php-gettext
-Requires:	php-pcre
 Requires:	php-imap
+Requires:	php-pcre
 Requires:	webserver
 Provides:	webmail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Prefix:		/home/services/httpd/html
 
 %define		_twigdir	/home/services/httpd/html/twig
 
 %description
-This package contains TWIG, a webmail and PIM system which allows
-you check mail by any cookie-aware WWW browser.
+This package contains TWIG, a webmail and PIM system which allows you
+check mail by any cookie-aware WWW browser.
 
 %description
 Ten pakiet zawiera system poczty WWW i zarz±dzania informacjami
@@ -53,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG CREDITS FAQ README TODO UPGRADE docs/*
 %dir %{_twigdir}
 %dir %{_twigdir}/config
-%config(noreplace) %verify(not size mtime md5) %{_twigdir}/config/*
+%config(noreplace) %verify(not md5 mtime size) %{_twigdir}/config/*
 %{_twigdir}/features
 %{_twigdir}/goto.php
 %{_twigdir}/images
