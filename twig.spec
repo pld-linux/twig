@@ -9,11 +9,11 @@ Source0:	http://twig.screwdriver.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	03bbdd4d6180789451a2bb20c06f790f
 Patch0:		%{name}-php4.patch
 URL:		http://twig.screwdriver.net/
-Requires:	php
-Requires:	php-gettext
-Requires:	php-imap
-Requires:	php-pcre
+Requires:	php(gettext)
+Requires:	php(imap)
+Requires:	php(pcre)
 Requires:	webserver
+Requires:	webserver(php)
 Provides:	webmail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
