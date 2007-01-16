@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains TWIG, a webmail and PIM system which allows you
 check mail by any cookie-aware WWW browser.
 
-%description
+%description -l pl
 Ten pakiet zawiera system poczty WWW i zarz±dzania informacjami
 osobistymi TWIG, umo¿liwiaj±cy sprawdzanie poczty za pomoc± dowolnej
 wspieraj±cej ciasteczka (cookies) przegl±darki WWW.
