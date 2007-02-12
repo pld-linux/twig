@@ -1,5 +1,5 @@
 Summary:	TWIG - webmail and PIM package
-Summary(pl.UTF-8):   TWIG - pakiet do poczty WWW i zarządzania informacjami osobistymi
+Summary(pl.UTF-8):	TWIG - pakiet do poczty WWW i zarządzania informacjami osobistymi
 Name:		twig
 Version:	2.7.7
 Release:	1
