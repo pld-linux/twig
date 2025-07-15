@@ -30,7 +30,7 @@ wspierającej ciasteczka (cookies) przeglądarki WWW.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 for I in `find . -name '*.php3'`; do
